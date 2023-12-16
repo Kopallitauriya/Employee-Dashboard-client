@@ -9,8 +9,9 @@ import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 
-const pages = ['Notifications', 'Contact Us', 'Profile'];
+
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -75,13 +76,17 @@ export default function SearchAppBar() {
                         component="div"
                         sx={{ flexGrow: 1, color: "black ", display: { xs: 'none', sm: 'block' } }}
                     >
-                        Demo
+                        <Link className='link-button' to={"/"}>Panicle</Link>
                     </Typography>
-                    {pages.map((page) => (
-                        <MenuItem key={page}>
-                            <Typography color="black" textAlign="center">{page}</Typography>
-                        </MenuItem>
-                    ))}
+                    
+                    <MenuItem >
+                        <Typography color="black" textAlign="center"><Link to={"/form"} className='link-button'>Create Employee</Link></Typography>
+                       
+                    </MenuItem>
+                    <MenuItem >
+                        <Typography color="black" textAlign="center"><Link to={"/user"} className='link-button' >Manage Employee</Link></Typography>
+                    </MenuItem>
+                    
 
                     <Search>
                         <SearchIconWrapper>
