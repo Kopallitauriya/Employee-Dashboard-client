@@ -115,11 +115,11 @@ function App() {
 
                   </div>
                   <div className='bargraph'>
-                    <BarChart chartData={chartData.age} />
+                    <BarChart chartData={chartData?.age} />
                   </div>
                 </div>
                 <div className='piechart'>
-                  <PieChart chartData={chartData.departmentwiseEmployeeCount} />
+                  <PieChart chartData={chartData?.departmentwiseEmployeeCount} />
                 </div>
               </div>
               <div className='boxplot'>
@@ -127,7 +127,7 @@ function App() {
                   <h2>Salary</h2><h2>Distribution </h2><br />
 
                 </div>
-                <BoxPlot chartData={chartData.salary} />
+                <BoxPlot chartData={chartData?.salary} />
               </div>
 
             </div>
